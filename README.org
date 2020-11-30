@@ -1,0 +1,21 @@
+#+TITLE: frctl
+
+A cli for generating fractals.
+
+* About
+Currently this only generates a rendering of the [[https://en.wikipedia.org/wiki/Mandelbrot_set#Basic_properties][Mandelbrot set.]]
+* Usage
+#+begin_src bash
+cargo build --release
+
+# to see all the options
+./target/release/frctl --help
+
+# to generate an interesting picture
+./target/release/frctl -r '-0.5557506' -i '-0.55560' -w 1024 -h 1024 fractal.png
+#+end_src
+
+* Credit
+This project started from [[https://github.com/abour/fractal][this repo]]. I stripped it back to a synchronous version
+to work on modularizing the code as my final intent is to be able to create a
+more general CLI for rendering fractals.
